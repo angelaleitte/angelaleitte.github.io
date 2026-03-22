@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Scroll Video Suave</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#000;color:#fff;font-family:Arial;overflow-x:hidden;}
+
+.loader{
+  position:fixed; inset:0;video
+  display:flex; align-items:center; justify-content:center;
+  background:#000; z-index:9999;
+}
+
+.scene{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+
+.scene video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.text{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  font-size:4rem;
+  opacity:0;
+  transform:translateY(100px);
+}
+
+.section.scene{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#111;
+  opacity:0;
+  transform:translateY(100px);
+}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader">Carregando...</div>
+
+<section class="scene">
+  <video id="video" muted playsinline preload="auto">
+    <!--ource src="output-cine.mp4" type="video/mp4"-->
+    <source src="https://lightsteelblue-donkey-368440.hostingersite.com/wp-content/uploads/2026/03/output-cine.mp4" type="video/mp4">
+  </video>
+
+  <h1 class="text t1">ENERGIA</h1>
+  <h1 class="text t2">MOVIMENTO</h1>
+  <h1 class="text t3">IMPACTO</h1>
+</section>
+
+<section class="section">Seção 1</section>
+<section class="section">Seção 2</section>
+<section class="section">Seção 3</section>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+const video = document.getElementById("video");
+const loader = document.getElementById("loader");
+
+// ✅ quando vídeo estiver pronto
+video.addEventListener("loadedmetadata", () => {
+
+  loader.style.display = "none";
+
+  // ⚠️ IMPORTANTE: força início
+  video.currentTime = 0;
+
+  // 🔥 TIMELINE PRINCIPAL
+  let tl = gsap.timeline({
+    scrollTrigger:{
+      trigger:".scene",
+      start:"top top",
+      end:"+=3000", // quanto maior, mais lento
+      scrub: 1.5,
+      pin:true
+    }
+  });
+
+  // 🎬 CONTROLE DO VIDEO (SIMPLES E ESTÁVEL)
+  tl.to(video,{
+    currentTime: video.duration,
+    ease:"none"
+  },0);
+
+  // 🔥 TEXTOS
+  tl.to(".t1",{opacity:1,y:0},0.1)
+    .to(".t1",{opacity:0,y:-100},0.3)
+
+    .to(".t2",{opacity:1,y:0},0.4)
+    .to(".t2",{opacity:0,y:-100},0.6)
+
+    .to(".t3",{opacity:1,y:0},0.7)
+    .to(".t3",{opacity:0,y:-100},0.9);
+
+  // 📦 SEÇÕES
+  gsap.to(".section",{
+    opacity:1,
+    y:0,
+    stagger:0.2,
+    scrollTrigger:{
+      trigger:".section",
+      start:"top 80%"
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
