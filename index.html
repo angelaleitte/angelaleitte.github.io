@@ -1,128 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>Scroll Video Suave</title>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angela Leitte — Link na bio</title>
+    <meta name="description" content="Angela Leitte — Desenvolvedora Web. Sites, landing pages e links na bio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="bg-image" aria-hidden="true"></div>
+      <div class="bg-overlay"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+      <main class="content">
+        <div class="profile-block">
+          <div class="profile-row">
+            <div class="logo-badge logo-bounce" aria-hidden="true">
+              <div class="logo-badge-inner">
+                <span class="logo-a">A</span><span class="logo-l">L.</span>
+              </div>
+            </div>
+            <div class="avatar-wrap">
+              <div class="avatar">
+                <img src="assets/profile.png" alt="Angela Leitte" width="160" height="160" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#000;color:#fff;font-family:Arial;overflow-x:hidden;}
+        <div class="identity">
+          <h1 class="name">Angela Leite</h1>
+          <p class="role">Desenvolvedora Web</p>
+          <p class="tagline">Tecnologia com propósito digital</p>
+        </div>
 
-.loader{
-  position:fixed; inset:0;video
-  display:flex; align-items:center; justify-content:center;
-  background:#000; z-index:9999;
-}
+        <p class="headline">
+          <svg class="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+          </svg>
+          Transformo ideias em <span class="headline-accent">presença digital que vende</span>. Sites, landing pages e links na bio que fazem seu negócio ser encontrado.
+        </p>
 
-.scene{
-  position:relative;
-  height:100vh;
-  overflow:hidden;
-}
+        <ul class="links" role="list">
+          <li>
+            <a class="link-card" href="https://angelaleitte.com.br/" target="_blank" rel="noopener noreferrer">
+              <span class="link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <span class="link-text">
+                <span class="link-title">Visite meu portfólio</span>
+                <span class="link-sub">Sites que convertem visitantes em clientes</span>
+              </span>
+              <svg class="link-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="link-card" href="https://wa.me/5516993942371?text=Ol%C3%A1%20Angela!%20Vi%20seu%20perfil%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer">
+              <span class="link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </span>
+              <span class="link-text">
+                <span class="link-title">Quer ter um site proffissional?</span>
+                <span class="link-sub">Fale comigo e vamos conversar sobre seu projeto!</span>
+              </span>
+              <svg class="link-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="link-card" href="https://www.linkedin.com/in/angela-mleite/" target="_blank" rel="noopener noreferrer">
+              <span class="link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span class="link-text">
+                <span class="link-title">LinkedIn Pessoal</span>
+                <span class="link-sub">Minha jornada e bastidores</span>
+              </span>
+              <svg class="link-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="link-card" href="https://www.linkedin.com/in/angela-m-leitte/" target="_blank" rel="noopener noreferrer">
+              <span class="link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span class="link-text">
+                <span class="link-title">LinkedIn Profissional</span>
+                <span class="link-sub">Cases, portfólio e resultados</span>
+              </span>
+              <svg class="link-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+        </ul>
 
-.scene video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.text{
-  position:absolute;
-  top:50%;
-  width:100%;
-  text-align:center;
-  font-size:4rem;
-  opacity:0;
-  transform:translateY(100px);
-}
-
-.section.scene{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#111;
-  opacity:0;
-  transform:translateY(100px);
-}
-</style>
-</head>
-<body>
-
-<div class="loader" id="loader">Carregando...</div>
-
-<section class="scene">
-  <video id="video" muted playsinline preload="auto">
-    <source src="output-cine.mp4" type="video/mp4">
-    <!--source src="https://lightsteelblue-donkey-368440.hostingersite.com/wp-content/uploads/2026/03/output-cine.mp4" type="video/mp4"-->
-  </video>
-
-  <h1 class="text t1">ENERGIA</h1>
-  <h1 class="text t2">MOVIMENTO</h1>
-  <h1 class="text t3">IMPACTO</h1>
-</section>
-
-<section class="section">Seção 1</section>
-<section class="section">Seção 2</section>
-<section class="section">Seção 3</section>
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-const video = document.getElementById("video");
-const loader = document.getElementById("loader");
-
-// ✅ quando vídeo estiver pronto
-video.addEventListener("loadedmetadata", () => {
-
-  loader.style.display = "none";
-
-  // ⚠️ IMPORTANTE: força início
-  video.currentTime = 0;
-
-  // 🔥 TIMELINE PRINCIPAL
-  let tl = gsap.timeline({
-    scrollTrigger:{
-      trigger:".scene",
-      start:"top top",
-      end:"+=3000", // quanto maior, mais lento
-      scrub: 1.5,
-      pin:true
-    }
-  });
-
-  // 🎬 CONTROLE DO VIDEO (SIMPLES E ESTÁVEL)
-  tl.to(video,{
-    currentTime: video.duration,
-    ease:"none"
-  },0);
-
-  // 🔥 TEXTOS
-  tl.to(".t1",{opacity:1,y:0},0.1)
-    .to(".t1",{opacity:0,y:-100},0.3)
-
-    .to(".t2",{opacity:1,y:0},0.4)
-    .to(".t2",{opacity:0,y:-100},0.6)
-
-    .to(".t3",{opacity:1,y:0},0.7)
-    .to(".t3",{opacity:0,y:-100},0.9);
-
-  // 📦 SEÇÕES
-  gsap.to(".section",{
-    opacity:1,
-    y:0,
-    stagger:0.2,
-    scrollTrigger:{
-      trigger:".section",
-      start:"top 80%"
-    }
-  });
-
-});
-</script>
-
-</body>
+        <footer class="footer">
+          <a class="footer-link" href="https://www.angelaleitte.com.br" target="_blank" rel="noopener noreferrer">
+            <svg class="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="m15 3 6 0 0 6"/><path d="m10 14 11-11"/></svg>
+            angelaleitte.com.br
+          </a>
+          <p class="copyright">© <span id="year"></span> Angela Leitte</p>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
