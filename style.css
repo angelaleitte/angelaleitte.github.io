@@ -186,7 +186,12 @@ body {
   border-radius: 44% 56% 39% 61% / 63% 41% 59% 37%;
   overflow: hidden;
   border: none;
-  background: rgba(210, 255, 248, 0.14);
+  background:
+    linear-gradient(rgba(210, 255, 248, 0.14), rgba(210, 255, 248, 0.14)),
+    url("assets/video-poster.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   isolation: isolate;
   transform: rotate(-4deg);
 }
