@@ -16,20 +16,23 @@
       <div class="bg-overlay"></div>
 
       <main class="content">
-        <div class="profile-block">
-          <div class="profile-row">
-            <div class="logo-badge logo-bounce" aria-hidden="true">
-              <div class="logo-badge-inner">
-                <span class="logo-a">A</span><span class="logo-l">L.</span>
-              </div>
-            </div>
-            <div class="avatar-wrap">
-              <div class="avatar">
-                <img src="assets/02-reduzida.webp" alt="Angela Leitte" width="160" height="160" />
-              </div>
+        <section class="top-video" aria-label="Vídeo de apresentação">
+          <div class="top-video-row">
+            <div class="top-video-fade">
+              <video
+                id="intro-video"
+                class="intro-video"
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-src="assets/angela-seedance.mp4"
+              >
+                Seu navegador não suporta vídeo em HTML5.
+              </video>
             </div>
           </div>
-        </div>
+        </section>
 
         <div class="identity">
           <h1 class="name">Angela Leite</h1>
@@ -96,6 +99,11 @@
         </ul>
 
         <footer class="footer">
+          <div class="footer-logo logo-badge logo-bounce" aria-hidden="true">
+            <div class="logo-badge-inner">
+              <span class="logo-a">A</span><span class="logo-l">L.</span>
+            </div>
+          </div>
           <a class="footer-link" href="https://angelaleitte.com.br" target="_blank" rel="noopener noreferrer">
             <svg class="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="m15 3 6 0 0 6"/><path d="m10 14 11-11"/></svg>
             angelaleitte.com.br
